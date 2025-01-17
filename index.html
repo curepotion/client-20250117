@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/navbar.css" rel="stylesheet">
+    <link href="styles/common.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="品牌名稱" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            服務項目
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services.html#curtains">窗簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#sheer">窗紗</a></li>
+                            <li><a class="dropdown-item" href="services.html#wallpaper">壁紙</a></li>
+                            <li><a class="dropdown-item" href="services.html#plastic-door">塑膠拉門</a></li>
+                            <li><a class="dropdown-item" href="services.html#vinyl-floor">塑膠地板</a></li>
+                            <li><a class="dropdown-item" href="services.html#click-floor">卡扣地板</a></li>
+                            <li><a class="dropdown-item" href="services.html#dimming">調光簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#roller">捲簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#divider">隔簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#beaded">珠簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#carpet">地毯</a></li>
+                            <li><a class="dropdown-item" href="services.html#carpet-tile">方塊地毯</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">作品展示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">檢測報告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 全寬輪播圖 -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/1.svg" alt="專業服務">
+                <div class="carousel-caption" data-aos="fade-up">
+                    <h1 class="display-4">佳美窗簾美學設計</h1>
+                    <p class="lead">窗簾 / 壁紙 / 拉門 / 塑膠地板 / 卡扣式地板</p>
+                    <p class="lead">20年專業經驗，打造完美空間</p>
+                    <p class="lead">我們致力於提供最優質的窗簾與地板解決方案，為客戶創造舒適、美觀的生活環境。</p>
+                 
+                    <a href="#about" class="btn btn-primary btn-lg mt-3">了解更多</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/2.svg" alt="合作廠商">
+                <div class="carousel-caption">
+                    <h2>合作知名品牌</h2>
+                    <p>與台灣多家知名企業長期配合</p>
+                    <div class="partner-logos">
+                        <img src="images/partner1.png" alt="合作廠商1" class="partner-logo">
+                        <img src="images/partner2.png" alt="合作廠商2" class="partner-logo">
+                        <img src="images/partner3.png" alt="合作廠商3" class="partner-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/3.svg" alt="工程實績">
+                <div class="carousel-caption">
+                    <h2>精選工程實績</h2>
+                    <p>展現專業施工品質與設計美學</p>
+                    <div class="project-highlights">
+                        <div class="project-item">
+                            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=400" alt="案例1">
+                            <p>台北101辦公大樓</p>
+                        </div>
+                        <div class="project-item">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400" alt="案例2">
+                            <p>信義區豪宅</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/4.svg" alt="設計美學">
+                <div class="carousel-caption">
+                    <h2>設計美學</h2>
+                    <p>專業設計團隊，為您打造完美空間</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- 公司發展歷程 -->
+    <section class="history-section" id="about">
+        <div class="container">
+            <h2 class="text-center mb-5">關於佳美窗簾</h2>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+                    <div class="history-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>創立與發展</h3>
+                        <p>佳美窗簾美學設計&室內裝潢於民國73年開始於鳳山區五甲三路上開設實體店面迄今，服務範圍遍及高雄、屏東、台南。</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="history-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>專業傳承</h3>
+                        <p>林老闆從學徒到師傅，於民國67年開店營業至今。從菜市場巷內工作室，逐步發展成現代化店面。</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="history-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>用心服務</h3>
+                        <p>用心經營38年，不斷求新求進步。以親切服務及專業介紹，配合細心施工和完善售後服務。</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="history-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>專業團隊</h3>
+                        <p>我們的壁紙、窗簾、輕鋼架、地磚師傅，都擁有25年以上的安裝專業經驗。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 關於我們 (Parallax Section) -->
+    <section id="about-section" class="parallax-section">
+        <div class="container parallax-content">
+            <div class="row">
+                <div class="col-6" data-aos="fade-up">
+                    <div class="card bg-transparent text-white border-light">
+                        <div class="card-body text-center">
+                            <h3>10000+</h3>
+                            <p>完成專案</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bg-transparent text-white border-light">
+                        <div class="card-body text-center">
+                            <h3>500+</h3>
+                            <p>合作客戶</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 統計數據 (Parallax Section) -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">服務年資</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">完成案例</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">專業團隊</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">客戶滿意度</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Swiper Gallery -->
+    <section class="swiper-section">
+        <div class="container">
+            <h2 class="text-center mb-5">精選案例展示</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800" alt="案例1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800" alt="案例2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800" alt="案例3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800" alt="案例4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800" alt="案例5" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800" alt="案例6" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?auto=format&fit=crop&w=800" alt="案例7" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800" alt="案例8" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=800" alt="案例9" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800" alt="案例10" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800" alt="案例11" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=800" alt="案例12" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=800" alt="案例13" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>© 2024 您的公司名稱. 版權所有.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://line.me/ti/p/7IXOg4XTVN" class="floating-btn line" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-line"></i>
+        </a>
+        <a href="tel:07-8119955" class="floating-btn phone">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize Swiper
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            initialSlide: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar shrink effect
+        function handleNavbarShrink() {
+            const navbar = document.querySelector('.navbar');
+            const body = document.body;
+            if (window.scrollY > 50) {
+                navbar.classList.add('shrink');
+                body.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('shrink');
+                body.classList.remove('scrolled');
+            }
+        }
+
+        // Add event listeners
+        window.addEventListener('scroll', handleNavbarShrink);
+        // Initial check on page load
+        window.addEventListener('load', handleNavbarShrink);
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.querySelector('.navbar-collapse');
+            const toggler = document.querySelector('.navbar-toggler');
+            if (navbar.classList.contains('show') && 
+                !navbar.contains(event.target) && 
+                !toggler.contains(event.target)) {
+                toggler.click();
+            }
+        });
+    </script>
+</body>
+</html> 

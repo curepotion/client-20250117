@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/navbar.css" rel="stylesheet">
+    <link href="styles/common.css" rel="stylesheet">
+    <style>
+        .contact-section {
+            padding: 56px 0;
+     
+        }
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(119, 92, 65, 0.1);
+            height: 100%;
+        }
+        .form-control:focus {
+            border-color: #775c41;
+            box-shadow: 0 0 0 0.2rem rgba(119, 92, 65, 0.25);
+        }
+        .map-wrapper {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(119, 92, 65, 0.1);
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .contact-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-item {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .contact-item i {
+            color: #775c41;
+            margin-right: 10px;
+            width: 20px;
+        }
+        @media (max-width: 991.98px) {
+            .map-wrapper {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="品牌名稱" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            服務項目
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services.html#curtains">窗簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#sheer">窗紗</a></li>
+                            <li><a class="dropdown-item" href="services.html#wallpaper">壁紙</a></li>
+                            <li><a class="dropdown-item" href="services.html#plastic-door">塑膠拉門</a></li>
+                            <li><a class="dropdown-item" href="services.html#vinyl-floor">塑膠地板</a></li>
+                            <li><a class="dropdown-item" href="services.html#click-floor">卡扣地板</a></li>
+                            <li><a class="dropdown-item" href="services.html#dimming">調光簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#roller">捲簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#divider">隔簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#beaded">珠簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#carpet">地毯</a></li>
+                            <li><a class="dropdown-item" href="services.html#carpet-tile">方塊地毯</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">作品展示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">檢測報告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1920');">
+        <h1>聯絡我們</h1>
+    </header>
+
+    <!-- 聯絡表單區域 -->
+    <section class="contact-section">
+        <div class="container">
+ 
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contactForm" action="mailto:a8115566@yahoo.com.tw" method="post" enctype="text/plain">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">您的大名 *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="company" class="form-label">公司名稱</label>
+                                <input type="text" class="form-control" id="company" name="company">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">公司地址</label>
+                                <input type="text" class="form-control" id="address" name="address">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">性別</label>
+                                <div class="d-flex gap-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="先生" checked>
+                                        <label class="form-check-label" for="male">先生</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="小姐">
+                                        <label class="form-check-label" for="female">小姐</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dayPhone" class="form-label">聯絡電話(日)</label>
+                                <input type="tel" class="form-control" id="dayPhone" name="dayPhone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nightPhone" class="form-label">聯絡電話(夜)</label>
+                                <input type="tel" class="form-control" id="nightPhone" name="nightPhone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="fax" class="form-label">傳真</label>
+                                <input type="tel" class="form-control" id="fax" name="fax">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobile" class="form-label">聯絡手機 *</label>
+                                <input type="tel" class="form-control" id="mobile" name="mobile" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">電子郵件</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">留言內容 *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <p class="text-muted mb-3"><small>* 為必填欄位</small></p>
+                            <button type="submit" class="btn btn-primary">送出</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-wrapper h-100">
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4679903223845!2d121.5143!3d25.0478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9727e339109%3A0xc34a31ce3a4abf64!2z5Y-w5YyX6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1639557762111!5m2!1szh-TW!2stw"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="contact-info mt-4">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                地址：高雄市鳳山區五甲三路xx號
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                電話：07-8119955
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                Email：a8115566@yahoo.com.tw
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                營業時間：週一至週六 09:00-18:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>© 2024 您的公司名稱. 版權所有.</p>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://line.me/ti/p/7IXOg4XTVN" class="floating-btn line" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-line"></i>
+        </a>
+        <a href="tel:07-8119955" class="floating-btn phone">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const subject = '網站聯絡表單';
+            const body = `
+                姓名: ${formData.get('name')}
+                性別: ${formData.get('gender')}
+                公司名稱: ${formData.get('company')}
+                公司地址: ${formData.get('address')}
+                聯絡電話(日): ${formData.get('dayPhone')}
+                聯絡電話(夜): ${formData.get('nightPhone')}
+                傳真: ${formData.get('fax')}
+                聯絡手機: ${formData.get('mobile')}
+                Email: ${formData.get('email')}
+                留言內容: ${formData.get('message')}
+            `;
+
+            // Create mailto link
+            const mailtoLink = `mailto:a8115566@yahoo.com.tw?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html> 

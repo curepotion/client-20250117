@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品展示</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/navbar.css" rel="stylesheet">
+    <link href="styles/common.css" rel="stylesheet">
+    <style>
+        .portfolio-section {
+            padding: 32px 0;
+
+        }
+
+        .portfolio-tabs {
+            margin-bottom: 40px;
+        }
+
+        .nav-pills .nav-link {
+            color: #775c41;
+            border-radius: 25px;
+            padding: 10px 25px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #775c41;
+            color: white !important;
+        }
+
+        .portfolio-item {
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(119, 92, 65, 0.1);
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .portfolio-title {
+            color: #775c41;
+            font-size: 1.2rem;
+            margin: 15px 15px 5px;
+            font-weight: 600;
+        }
+
+        .portfolio-category {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0 15px 15px;
+        }
+
+        .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: #775c41;
+            color: white;
+            border: none;
+        }
+
+        .modal-body img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航欄 (使用上面提供的共同導航欄代碼) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="品牌名稱" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            服務項目
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="services.html#curtains">窗簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#sheer">窗紗</a></li>
+                            <li><a class="dropdown-item" href="services.html#wallpaper">壁紙</a></li>
+                            <li><a class="dropdown-item" href="services.html#plastic-door">塑膠拉門</a></li>
+                            <li><a class="dropdown-item" href="services.html#vinyl-floor">塑膠地板</a></li>
+                            <li><a class="dropdown-item" href="services.html#click-floor">卡扣地板</a></li>
+                            <li><a class="dropdown-item" href="services.html#dimming">調光簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#roller">捲簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#divider">隔簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#beaded">珠簾</a></li>
+                            <li><a class="dropdown-item" href="services.html#carpet">地毯</a></li>
+                            <li><a class="dropdown-item" href="services.html#carpet-tile">方塊地毯</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">作品展示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">檢測報告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920');">
+        <h1>作品展示</h1>
+    </header>
+
+    <section class="portfolio-section">
+        <div class="container">
+
+            
+            <!-- Portfolio Tabs -->
+            <ul class="nav nav-pills justify-content-center portfolio-tabs" id="portfolioTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#all">全部作品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#curtains">窗簾作品</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#floor">地板作品</a>
+                </li>
+            </ul>
+
+            <!-- Portfolio Content -->
+            <div class="tab-content">
+                <!-- All Works Tab -->
+                <div class="tab-pane fade show active" id="all">
+                    <div class="row">
+                        <!-- Curtains Items -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal1">
+                                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="窗簾作品1">
+                                <h3 class="portfolio-title">現代簡約風窗簾</h3>
+                                <p class="portfolio-category">臥室設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal2">
+                                <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a" alt="窗簾作品2">
+                                <h3 class="portfolio-title">北歐風格窗簾</h3>
+                                <p class="portfolio-category">客廳設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal3">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="窗簾作品3">
+                                <h3 class="portfolio-title">日式禪風窗簾</h3>
+                                <p class="portfolio-category">和室設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal4">
+                                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77" alt="窗簾作品4">
+                                <h3 class="portfolio-title">奢華古典窗簾</h3>
+                                <p class="portfolio-category">主臥設計</p>
+                            </div>
+                        </div>
+                        <!-- Floor Items -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal9">
+                                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37" alt="地板作品1">
+                                <h3 class="portfolio-title">實木複合地板</h3>
+                                <p class="portfolio-category">客廳設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal10">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="地板作品2">
+                                <h3 class="portfolio-title">防水卡扣地板</h3>
+                                <p class="portfolio-category">浴室設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal11">
+                                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77" alt="地板作品3">
+                                <h3 class="portfolio-title">塑膠地板</h3>
+                                <p class="portfolio-category">廚房設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal12">
+                                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="地板作品4">
+                                <h3 class="portfolio-title">方塊地毯</h3>
+                                <p class="portfolio-category">辦公室設計</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curtains Tab -->
+                <div class="tab-pane fade" id="curtains">
+                    <div class="row">
+                        <!-- Repeat this structure for each portfolio item -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal1">
+                                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="窗簾作品1">
+                                <h3 class="portfolio-title">現代簡約風窗簾</h3>
+                                <p class="portfolio-category">臥室設計</p>
+                            </div>
+                        </div>
+                        <!-- Add 9 more similar items for curtains -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal2">
+                                <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a" alt="窗簾作品2">
+                                <h3 class="portfolio-title">北歐風格窗簾</h3>
+                                <p class="portfolio-category">客廳設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal3">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="窗簾作品3">
+                                <h3 class="portfolio-title">日式禪風窗簾</h3>
+                                <p class="portfolio-category">和室設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal4">
+                                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77" alt="窗簾作品4">
+                                <h3 class="portfolio-title">奢華古典窗簾</h3>
+                                <p class="portfolio-category">主臥設計</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floor Tab -->
+                <div class="tab-pane fade" id="floor">
+                    <div class="row">
+                        <!-- Add 10 items for floor -->
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal9">
+                                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37" alt="地板作品1">
+                                <h3 class="portfolio-title">實木複合地板</h3>
+                                <p class="portfolio-category">客廳設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal10">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="地板作品2">
+                                <h3 class="portfolio-title">防水卡扣地板</h3>
+                                <p class="portfolio-category">浴室設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal11">
+                                <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77" alt="地板作品3">
+                                <h3 class="portfolio-title">塑膠地板</h3>
+                                <p class="portfolio-category">廚房設計</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#modal12">
+                                <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="地板作品4">
+                                <h3 class="portfolio-title">方塊地毯</h3>
+                                <p class="portfolio-category">辦公室設計</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Template -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">現代簡約風窗簾</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="窗簾作品1">
+                    <h5>項目描述</h5>
+                    <p>這是一個現代簡約風格的窗簾設計案例。採用高質量的材料，搭配簡潔的線條設計，為空間帶來舒適與時尚的氛圍。</p>
+                    <h5>使用材質</h5>
+                    <ul>
+                        <li>進口環保面料</li>
+                        <li>靜音軌道系統</li>
+                        <li>抗UV處理</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">北歐風格窗簾</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a" alt="窗簾作品2">
+                    <h5>項目描述</h5>
+                    <p>北歐風格窗簾設計，採用淺色系布料，搭配簡約的線條，營造出明亮舒適的空間氛圍。</p>
+                    <h5>使用材質</h5>
+                    <ul>
+                        <li>亞麻混紡面料</li>
+                        <li>電動軌道系統</li>
+                        <li>遮光處理</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">日式禪風窗簾</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="窗簾作品3">
+                    <h5>項目描述</h5>
+                    <p>日式禪風窗簾設計，運用自然材質與簡約線條，創造寧靜優雅的和室空間。</p>
+                    <h5>使用材質</h5>
+                    <ul>
+                        <li>天然竹簾材質</li>
+                        <li>手動拉繩系統</li>
+                        <li>防霉處理</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="modal4" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">奢華古典窗簾</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77" alt="窗簾作品4">
+                    <h5>項目描述</h5>
+                    <p>奢華古典風格窗簾，採用高級緞面布料，搭配精緻的褶皺設計，展現尊貴典雅的居家氛圍。</p>
+                    <h5>使用材質</h5>
+                    <ul>
+                        <li>進口緞面布料</li>
+                        <li>電動遙控系統</li>
+                        <li>隔音處理</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="modal5" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">現代幾何壁紙</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37" alt="壁紙作品1">
+                    <h5>項目描述</h5>
+                    <p>現代幾何圖案壁紙設計，以簡潔的線條與層次，打造時尚現代的空間視覺效果。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>防水防潮</li>
+                        <li>易清潔維護</li>
+                        <li>環保材質</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue with modals 6-12 following similar pattern -->
+    <!-- Modal 6 -->
+    <div class="modal fade" id="modal6" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">花卉圖案壁紙</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f" alt="壁紙作品2">
+                    <h5>項目描述</h5>
+                    <p>精緻的花卉圖案壁紙，為臥室空間增添浪漫優雅的氛圍，色調柔和舒適。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>抗污防霉</li>
+                        <li>色彩持久</li>
+                        <li>無甲醛環保</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7 -->
+    <div class="modal fade" id="modal7" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">工業風壁紙</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0" alt="壁紙作品3">
+                    <h5>項目描述</h5>
+                    <p>工業風格壁紙設計，呈現粗獷與時尚的混搭風格，適合現代都市空間。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>耐磨耐刮</li>
+                        <li>質感細膩</li>
+                        <li>防火等級B1</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8 -->
+    <div class="modal fade" id="modal8" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">自然紋理壁紙</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45" alt="壁紙作品4">
+                    <h5>項目描述</h5>
+                    <p>自然紋理壁紙設計，模擬真實木紋與石紋，為空間增添自然溫暖感。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>3D立體紋理</li>
+                        <li>防水抗潮</li>
+                        <li>隔音效果佳</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9 -->
+    <div class="modal fade" id="modal9" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">實木複合地板</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37" alt="地板作品1">
+                    <h5>項目描述</h5>
+                    <p>高品質實木複合地板，結合實木的質感與複合材料的穩定性，適合各種居家空間。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>耐磨耐用</li>
+                        <li>防潮防蟲</li>
+                        <li>安裝便捷</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10 -->
+    <div class="modal fade" id="modal10" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">防水卡扣地板</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="地板作品2">
+                    <h5>項目描述</h5>
+                    <p>專業防水卡扣地板，特別適合浴室等潮濕空間，安裝便利且防水效果出色。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>100%防水</li>
+                        <li>卡扣安裝</li>
+                        <li>防滑處理</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 11 -->
+    <div class="modal fade" id="modal11" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">塑膠地板</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77" alt="地板作品3">
+                    <h5>項目描述</h5>
+                    <p>高級塑膠地板，具有優異的耐磨性和防水性，適合廚房等高頻使用空間。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>耐磨防水</li>
+                        <li>易於清潔</li>
+                        <li>抗菌處理</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 12 -->
+    <div class="modal fade" id="modal12" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">方塊地毯</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed" alt="地板作品4">
+                    <h5>項目描述</h5>
+                    <p>商用方塊地毯，適合辦公空間使用，具有優異的吸音效果和舒適度。</p>
+                    <h5>特點</h5>
+                    <ul>
+                        <li>吸音降噪</li>
+                        <li>模組化設計</li>
+                        <li>易於更換</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁腳 -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p>© 2024 您的公司名稱. 版權所有.</p>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://line.me/ti/p/7IXOg4XTVN" class="floating-btn line" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-line"></i>
+        </a>
+        <a href="tel:07-8119955" class="floating-btn phone">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar shrink effect
+        function handleNavbarShrink() {
+            const navbar = document.querySelector('.navbar');
+            const body = document.body;
+            if (window.scrollY > 50) {
+                navbar.classList.add('shrink');
+                body.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('shrink');
+                body.classList.remove('scrolled');
+            }
+        }
+
+        // Add event listeners
+        window.addEventListener('scroll', handleNavbarShrink);
+        // Initial check on page load
+        window.addEventListener('load', handleNavbarShrink);
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navbar = document.querySelector('.navbar-collapse');
+            const toggler = document.querySelector('.navbar-toggler');
+            if (navbar.classList.contains('show') && 
+                !navbar.contains(event.target) && 
+                !toggler.contains(event.target)) {
+                toggler.click();
+            }
+        });
+    </script>
+</body>
+</html> 
